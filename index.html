@@ -267,10 +267,11 @@
 
     /* ── Artistic Countdown ── */
     .countdown {
-      display: flex;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
       gap: 1rem;
-      flex-wrap: wrap;
+      max-width: 500px;
+      margin: 0 auto;
       animation: fadeInUp 1s 0.9s both;
     }
 
@@ -480,17 +481,19 @@
     /* ── Responsive ── */
     @media (max-width: 600px) {
       .cd-box {
-        min-width: 75px;
-        padding: 1.2rem 0.8rem 1rem;
+        min-width: unset;
+        padding: 1rem 0.6rem 0.8rem;
         border-radius: 18px;
       }
 
       .cd-number {
-        font-size: 2.4rem;
+        font-size: 2.2rem;
       }
 
       .countdown {
-        gap: 0.8rem;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+        max-width: 280px;
       }
 
       .flourish {
