@@ -10,7 +10,8 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Galada&family=Great+Vibes&family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
     rel="stylesheet" />
 
   <style>
@@ -117,16 +118,17 @@
     }
 
     .subtitle {
-      font-family: 'Great Vibes', cursive;
-      font-size: clamp(1.3rem, 4vw, 2.2rem);
+      font-family: 'Galada', cursive;
+      font-size: clamp(1.4rem, 4vw, 2.4rem);
       color: var(--hot-pink);
       margin-top: 0.3rem;
       animation: fadeInUp 1s 0.6s both;
     }
 
     .tagline {
+      font-family: 'Hind Siliguri', sans-serif;
       font-size: 1.05rem;
-      font-weight: 300;
+      font-weight: 400;
       color: var(--text-med);
       margin-top: 1rem;
       max-width: 480px;
@@ -173,10 +175,10 @@
     .cd-label {
       display: block;
       margin-top: 0.4rem;
-      font-size: 0.82rem;
+      font-family: 'Hind Siliguri', sans-serif;
+      font-size: 0.9rem;
       color: var(--text-med);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.04em;
     }
 
     /* ── Birthday Message (hidden until it's the day) ── */
@@ -198,7 +200,8 @@
     }
 
     .birthday-msg p {
-      font-size: 1.1rem;
+      font-family: 'Hind Siliguri', sans-serif;
+      font-size: 1.15rem;
       line-height: 1.8;
       color: var(--text-dark);
     }
@@ -293,39 +296,39 @@
   <div class="container">
     <p class="eyebrow">✨ Something Beautiful is Coming ✨</p>
     <h1 class="title">Monusree</h1>
-    <h2 class="subtitle">Your Special Day is Almost Here 💕</h2>
-    <p class="tagline">A little surprise is being prepared just for you. Stay tuned, my love…</p>
+    <h2 class="subtitle">আর কয়েকদিন বাকি 💕</h2>
+    <p class="tagline">তোর জন্য একটা সারপ্রাইজ অপেক্ষা করছে।</p>
 
     <!-- Countdown Timer -->
     <div class="countdown">
       <div class="cd-box">
         <span id="cd-days" class="cd-number">--</span>
-        <span class="cd-label">Days</span>
+        <span class="cd-label">দিন</span>
       </div>
       <div class="cd-box">
         <span id="cd-hours" class="cd-number">--</span>
-        <span class="cd-label">Hours</span>
+        <span class="cd-label">ঘন্টা</span>
       </div>
       <div class="cd-box">
         <span id="cd-minutes" class="cd-number">--</span>
-        <span class="cd-label">Minutes</span>
+        <span class="cd-label">মিনিট</span>
       </div>
       <div class="cd-box">
         <span id="cd-seconds" class="cd-number">--</span>
-        <span class="cd-label">Seconds</span>
+        <span class="cd-label">সেকেন্ড</span>
       </div>
     </div>
 
     <!-- Shows when countdown reaches zero -->
     <div id="birthday-msg" class="birthday-msg">
-      <p>🎂 Happy Birthday, Monusree! 🎂<br />
-        The wait is over — something special is here for you! 💖✨</p>
+      <p>🎂 শুভ জন্মদিন, আলো! 🎂<br />
+        তোর জন্য একটা সারপ্রাইজ অপেক্ষা করছে। চোখ রাখিস চোখ বন্ধ করে থাকিস না। 💖✨</p>
     </div>
   </div>
 
   <div class="footer">
-    <p>Made with all my 💖</p>
-    <p class="sig">— Forever yours 🌹</p>
+    <p>Made with all my 💖 by Tubelight</p>
+    <p class="sig">Forever yours</p>
   </div>
 
   <script>
@@ -333,7 +336,7 @@
        CONFIG — Change her birthday here!
        ════════════════════════════════════════ */
     const BIRTHDAY_MONTH = 2;   // 1 = Jan … 12 = Dec
-    const BIRTHDAY_DAY = 15;  // Day of month
+    const BIRTHDAY_DAY = 20;  // Day of month
 
     /* ── Countdown ── */
     (function countdown() {
