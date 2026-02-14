@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Monusree 💖</title>
+  <meta name="description" content="A special birthday wish for the most amazing person — Monusree." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       LOADING SCREEN
+  ═══════════════════════════════════════════ -->
+  <div id="loader" class="loader">
+    <div class="loader-heart">💖</div>
+    <p class="loader-text">Preparing something special…</p>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       MUSIC CONTROL (floating)
+  ═══════════════════════════════════════════ -->
+  <button id="music-btn" class="music-btn" aria-label="Toggle background music">
+    <span class="music-icon">🎵</span>
+  </button>
+
+  <!-- Background audio — replace with your own file if desired -->
+  <audio id="bg-music" loop preload="auto">
+    <source src="https://cdn.pixabay.com/download/audio/2022/02/23/audio_ea70ad08e0.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- ═══════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════ -->
+  <nav id="navbar" class="navbar">
+    <a href="#hero" class="nav-link">Home</a>
+    <a href="#gallery" class="nav-link">Gallery</a>
+    <a href="#love-message" class="nav-link">Message</a>
+    <a href="#timeline" class="nav-link">Memories</a>
+    <a href="#surprise" class="nav-link">Surprise</a>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════
+       HERO SECTION
+  ═══════════════════════════════════════════ -->
+  <section id="hero" class="hero">
+    <!-- Canvas for floating hearts -->
+    <canvas id="hearts-canvas"></canvas>
+
+    <div class="hero-content fade-in-up">
+      <p class="hero-eyebrow">✨ A Special Day for a Special Person ✨</p>
+      <h1 class="hero-title">Monusree</h1>
+      <h2 class="hero-subtitle">Happy Birthday, My Love 💕</h2>
+      <p class="hero-tagline">Today the world celebrates the day it got a little more beautiful.</p>
+      <a href="#love-message" class="hero-cta">Read My Message&nbsp;💌</a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       PHOTO GALLERY
+  ═══════════════════════════════════════════ -->
+  <section id="gallery" class="section gallery">
+    <h2 class="section-title scroll-reveal">Our Beautiful Moments 📸</h2>
+    <p class="section-subtitle scroll-reveal">Every photo holds a story only we know.</p>
+
+    <div class="gallery-grid">
+      <!-- Replace these Unsplash URLs with your own photos -->
+      <div class="gallery-item scroll-reveal">
+        <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=600&q=80" alt="Memory 1"
+          loading="lazy" />
+      </div>
+      <div class="gallery-item scroll-reveal">
+        <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=600&q=80" alt="Memory 2"
+          loading="lazy" />
+      </div>
+      <div class="gallery-item scroll-reveal">
+        <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=600&q=80" alt="Memory 3"
+          loading="lazy" />
+      </div>
+      <div class="gallery-item scroll-reveal">
+        <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=600&q=80" alt="Memory 4"
+          loading="lazy" />
+      </div>
+      <div class="gallery-item scroll-reveal">
+        <img src="https://images.unsplash.com/photo-1544078751-58fee2d8a03b?w=600&q=80" alt="Memory 5" loading="lazy" />
+      </div>
+      <div class="gallery-item scroll-reveal">
+        <img src="https://images.unsplash.com/photo-1474552226712-ac0f0961a954?w=600&q=80" alt="Memory 6"
+          loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       LOVE MESSAGE
+  ═══════════════════════════════════════════ -->
+  <section id="love-message" class="section love-message">
+    <h2 class="section-title scroll-reveal">A Letter From My Heart 💌</h2>
+
+    <div class="glass-card scroll-reveal">
+      <p id="typing-text" class="typing-paragraph"></p>
+
+      <button id="reveal-btn" class="btn-glow" style="display:none;">
+        Read More… 💗
+      </button>
+
+      <div id="hidden-message" class="hidden-message" style="display:none;">
+        <p>
+          You are the reason I believe in magic. Every moment with you feels like a dream
+          I never want to wake up from. Your smile lights up my darkest days, and your laugh
+          is my favourite melody. I promise to love you more with every passing heartbeat.
+          Happy Birthday, my everything. 🌹
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       MEMORY TIMELINE
+  ═══════════════════════════════════════════ -->
+  <section id="timeline" class="section timeline-section">
+    <h2 class="section-title scroll-reveal">Our Love Timeline 💫</h2>
+    <p class="section-subtitle scroll-reveal">Milestones that made us — us.</p>
+
+    <div class="timeline">
+      <!-- Replace dates & text with your real memories -->
+      <div class="timeline-item scroll-reveal" data-side="left">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card glass-card">
+          <span class="timeline-date">The Day We Met 🌸</span>
+          <p>The universe conspired to bring us together, and from the very first glance I knew my world had changed
+            forever.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item scroll-reveal" data-side="right">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card glass-card">
+          <span class="timeline-date">Our First Date 🎡</span>
+          <p>Butterflies, nervous laughs, and the beginning of something truly extraordinary. I wouldn't trade that
+            evening for anything.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item scroll-reveal" data-side="left">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card glass-card">
+          <span class="timeline-date">First "I Love You" 💕</span>
+          <p>Three little words that changed everything. Saying them felt like coming home — because you are my home.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item scroll-reveal" data-side="right">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card glass-card">
+          <span class="timeline-date">Today — Your Birthday 🎂</span>
+          <p>Another year of your beautiful existence, and I get to celebrate it with you. Here's to a million more
+            birthdays together.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       BIRTHDAY SURPRISE
+  ═══════════════════════════════════════════ -->
+  <section id="surprise" class="section surprise-section">
+    <h2 class="section-title scroll-reveal">A Little Surprise 🎁</h2>
+    <p class="section-subtitle scroll-reveal">Go on… press the button 😊</p>
+
+    <button id="surprise-btn" class="btn-surprise scroll-reveal">
+      Click for Surprise 💖
+    </button>
+
+    <!-- Confetti canvas (injected by JS) -->
+    <canvas id="confetti-canvas"></canvas>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       COUNTDOWN TIMER
+  ═══════════════════════════════════════════ -->
+  <section id="countdown" class="section countdown-section">
+    <h2 class="section-title scroll-reveal">Countdown to Your Special Day 🎉</h2>
+
+    <div class="countdown-boxes scroll-reveal">
+      <div class="countdown-box glass-card">
+        <span id="cd-days" class="cd-number">00</span>
+        <span class="cd-label">Days</span>
+      </div>
+      <div class="countdown-box glass-card">
+        <span id="cd-hours" class="cd-number">00</span>
+        <span class="cd-label">Hours</span>
+      </div>
+      <div class="countdown-box glass-card">
+        <span id="cd-minutes" class="cd-number">00</span>
+        <span class="cd-label">Minutes</span>
+      </div>
+      <div class="countdown-box glass-card">
+        <span id="cd-seconds" class="cd-number">00</span>
+        <span class="cd-label">Seconds</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SURPRISE MODAL
+  ═══════════════════════════════════════════ -->
+  <div id="surprise-modal" class="modal-overlay" style="display:none;">
+    <div class="modal glass-card">
+      <button id="modal-close" class="modal-close">&times;</button>
+      <h2 class="modal-title">Happy Birthday, Monusree! 🎂💖</h2>
+      <p class="modal-body">
+        You deserve all the love, happiness, and magic the universe has to offer.
+        Thank you for being born and for choosing to share your life with me.
+        I love you beyond words, beyond time, beyond everything. 🌹✨
+      </p>
+      <p class="modal-footer-text">— Forever yours 💕</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer class="footer">
+    <p class="footer-text">Made with all my 💖 for you, Monusree</p>
+    <p class="footer-sig">— Your forever love 🌹</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
